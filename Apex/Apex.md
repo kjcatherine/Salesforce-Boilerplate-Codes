@@ -2,19 +2,19 @@
 This is a snippet for making a batch class.
 
 
-## Batch Class
+## BATCH APEX SNIPPET
 ```
-global class ClassName implements Database.Batchable<sObject> {
-    global (Database.QueryLocator | Iterable<sObject>) start(Database.BatchableContext bc) { //Choose between Database.QueryLocator or List<sObject>
-    	//Query
-      return 'SELECT FROM WHERE LIMIT';
+public class ClassName implements Database.Batchable<sObject> {
+    public (Database.QueryLocator | Iterable<sObject>) start(Database.BatchableContext bc) {
+        //Choose between Database.QueryLocator or List<sObject> Query
+        // collect the batches of records or objects to be passed to execute
     }
-    global void execute(Database.BatchableContext bc, List<sObject> iteratorList){
-    	//Process the query
+    public void execute(Database.BatchableContext bc, List<P> records){
+        // process each batch of records
     }
-    global void finish(Database.BatchableContext bc){
-	    //Post Processing
-    }
+    public void finish(Database.BatchableContext bc){
+        // post-processing operations
+}
 }
 ```
 

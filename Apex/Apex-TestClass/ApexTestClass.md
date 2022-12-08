@@ -1,35 +1,50 @@
 # Apex Unit Tests
-Boilerplate for Apex class.
+Boilerplate for Apex Unit Tests.
 
 
-## Apex Unit Tests 
+## Apex Unit Tests - Method 1
 ```
-//Class Definition, choose between private, public etc.
-private | public | global class ClassName {
-    
-    //Class Variables
-    private static final dataType variableName; 
-    private final dataType variableName;
+@isTest
+private class ClassNameTest {
+	@isTest static void testMethodName(){
+        //create an sobject for testing purposes
+        <sOjbectName> variableName = new <sOjbectName>();
+        variableName.field = value;
+        insert variableName;    
+    }
+}
+```
 
-    // Constructor with no argument 
-    public ClassName() {
-            this(variableName);
+## Apex Unit Tests - Method 2
+```
+@isTest
+private class ClassNameTest {
+    @isTest static void testMethodName() {
+        //instantiate class
+        ClassName variableName = new ClassName(argument);
+        //other processing here
+        System.assertEquals(expected, actual);
     }
-    // Constructor with one or more arguments 
-    public ClassName(dataType argumentName) {
-    this.variableName = argumentName;  | variableName = argumentName;
+}
+```
+
+## Apex Unit Tests - Method 3
+```
+@isTest
+private class ClassNameTest {
+    @testSetup static void TestClass(){
+    //Insert setup operations
     }
-    
-    //Method with return | input parameters optional
-    public | private | protected | global static dataType methodName() { 
-        return; 
-        //Logic here
-     }
-    //Method with no return 
-    public static void methodName() { 
-        //method logic here
-     }
- }
+    @isTest static void testMethodName() {
+
+        Test.startTest();
+        //Asynchronous processing here
+        Test.stopTest();
+        
+        //assert records were updated properly
+        System.assertEquals(expected, actual);
+    }
+}
 ```
 
 

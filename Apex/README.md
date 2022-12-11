@@ -6,4 +6,5 @@ A collection of Boilerplate codes for Salesforce development.
 - [Apex Trigger](Apex-Trigger/ApexTrigger.md)
 - [Apex Test Class](Apex-TestClass/ApexTestClass.md)
 - [Batch Apex](Batch-Apex/BatchApex.md)
+- [Scheduled Apex](Scheduled/Scheduled.md)
 

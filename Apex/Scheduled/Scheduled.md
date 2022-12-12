@@ -1,5 +1,5 @@
 # Scheduled Apex
-This is a snippet for making a scheduled class and test class.
+Boilerplate for scheduled class and test class
 
 ## Scheduled Class
 

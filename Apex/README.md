@@ -7,4 +7,5 @@ A collection of Boilerplate codes for Salesforce development.
 - [Apex Test Class](Apex-TestClass/ApexTestClass.md)
 - [Batch Apex](Batch-Apex/BatchApex.md)
 - [Scheduled Apex](Scheduled/Scheduled.md)
+- [SOQL & SOSL Query](SOQL-SOSL/SOQL-SOSL.md)
 

@@ -12,7 +12,13 @@ Boilerplate for Lightning Web Component.
 
 ## JavaScript
 ```
+import { LightningElement } from "lwc";
 
+export default class className extends LightningElement {
+  variableName = value;
+  //other logic here
+}
+//External CSS optional
 ```
 
 

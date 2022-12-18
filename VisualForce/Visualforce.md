@@ -9,15 +9,13 @@ Boilerplate for Visualforce markup and controllers
 </apex:page>
 ```
 
-## JavaScript
-```
-import { LightningElement } from "lwc";
+## Visualforce controllers
 
-export default class className extends LightningElement {
-  variableName = value;
-  //other logic here
-}
-//External CSS optional
+### //Standard controller
+```
+<apex:page standardController="standardsObject | customsObject__c">
+//code goes here
+</apex:page>
 ```
 
 

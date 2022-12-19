@@ -11,9 +11,18 @@ Boilerplate for Visualforce markup and controllers
 
 ## Visualforce controllers
 
-### //Standard controller
+### Standard controller
 ```
 <apex:page standardController="standardsObject | customsObject__c">
+//code goes here
+</apex:page>
+```
+
+### Custom controller
+
+#### Markup
+```
+<apex:page controller="controllerClassName" tabStyle="Object">
 //code goes here
 </apex:page>
 ```

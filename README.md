@@ -3,5 +3,5 @@ A collection of Boilerplate codes for Salesforce development.
 
 ## Index
 - [Apex Snippets](Apex/)
-- [LWC Snippets](LWC/)
-- [Visualforce Snippets](VisualForce/)
+- [LWC Snippets](LWC/LWC.md)
+- [Visualforce Snippets](VisualForce/Visualforce.md)

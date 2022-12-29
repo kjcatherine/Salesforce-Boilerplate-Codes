@@ -1,7 +1,40 @@
-# Salesforce Boilerplate Code Library
-A collection of Boilerplate codes for Salesforce development.
+# Batch Apex
+This is a snippet for making a batch class.
 
-## Index
-- [Apex Snippets](Apex/)
-- [LWC Snippets](LWC/)
-- [VisualForce Snippets](VisualForce/)
+
+## Batch Class
+```
+global class ClassName implements Database.Batchable<sObject> {
+    global (Database.QueryLocator | Iterable<sObject>) start(Database.BatchableContext bc) { //Choose between Database.QueryLocator or List<sObject>
+    	//Query
+      return 'SELECT FROM WHERE LIMIT';
+    }
+    global void execute(Database.BatchableContext bc, List<sObject> iteratorList){
+    	//Process the query
+    }
+    global void finish(Database.BatchableContext bc){
+	    //Post Processing
+    }
+}
+```
+
+## Test Class
+```
+@isTest
+public class ClassNameTest {
+    @testSetup static void TestClass(){
+    //Insert operations
+    }
+
+    static testmethod void testMethodName() {
+
+        Test.startTest();
+        ClassName batchTester = new ClassName();
+        ID BatchID = Database.executeBatch(batchTester);
+        Test.stopTest();
+
+        System.assertEquals(expected, actual, 'message');
+    }
+
+}
+```

@@ -2,7 +2,7 @@
 This is a snippet for making a batch class.
 
 
-## BATCH APEX SNIPPET
+## Batch Apex
 ```
 public class ClassName implements Database.Batchable<sObject> {
     public (Database.QueryLocator | Iterable<sObject>) start(Database.BatchableContext bc) {
@@ -18,7 +18,7 @@ public class ClassName implements Database.Batchable<sObject> {
 }
 ```
 
-## TEST CLASS
+## Test Class
 ```
 @isTest
 private class ClassNameTest {

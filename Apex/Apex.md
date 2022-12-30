@@ -18,23 +18,22 @@ public class ClassName implements Database.Batchable<sObject> {
 }
 ```
 
-## Test Class
+## TEST CLASS
 ```
 @isTest
-public class ClassNameTest {
+private class ClassNameTest {
     @testSetup static void TestClass(){
-    //Insert operations
+    //Insert setup operations
     }
-
-    static testmethod void testMethodName() {
-
+    @isTest static void testMethodName() {
+        
         Test.startTest();
         ClassName batchTester = new ClassName();
-        ID BatchID = Database.executeBatch(batchTester);
+        Id batchId = Database.executeBatch(batchTester);
         Test.stopTest();
 
+        //assert records were updated properly
         System.assertEquals(expected, actual, 'message');
     }
-
 }
 ```

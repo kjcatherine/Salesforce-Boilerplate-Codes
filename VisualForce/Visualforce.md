@@ -5,7 +5,8 @@ Boilerplate for Visualforce markup and controllers
 ## Visualforce Markup
 ```
 <apex:page>
-    //content that can go here - text, htmltags, VF tags, merge fields, ajax, css etc.
+    //content that can go here - text, htmltags, 
+    //VF tags, merge fields, ajax, css etc.
 </apex:page>
 ```
 

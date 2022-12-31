@@ -20,7 +20,7 @@ List<sObjectName> variableName = [SELECT field1,
 ## SOSL Query
 
 ```
-FIND {textString} IN ALL FIELDS 
-                  RETURNING object1(field),
-                            object2(field1, field2) //or more
+List<List<SObject>> searchList = [FIND textString IN ALL FIELDS 
+                                 RETURNING object1(field),
+                                 object2(field1, field2)]; //or more
 ```

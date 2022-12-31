@@ -34,13 +34,13 @@ public class controllerClassName {
 
     private final sObjectdataType variableName;
 
-    public controllerClassName() { //use logic as needed
+    public controllerClassName() { //use logic as needed 
         variableName = [SELECT Id, field1, field2 FROM sObject
                        WHERE Id = :ApexPages.currentPage().getParameters().get('id')];
     }
-    //get method
-    public sObjectName getSobjectName() {
-        return account;
+    //get method 
+    public sObjectdataType getSobjectName() {
+        return sObjectdataType; //or other dataType
     }
     //other code
     public PageReference save() {
@@ -53,6 +53,5 @@ public class controllerClassName {
     }
     //other code
 }
-
 ```
 

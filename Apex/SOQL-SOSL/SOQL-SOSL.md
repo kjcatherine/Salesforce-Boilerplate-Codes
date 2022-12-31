@@ -4,17 +4,17 @@ Boilerplate for SOQL and SOQL Query languages.
 ## SOQL Query
 
 ```
-SELECT field1, 
-       field2,
-       field3 etc
-FROM Account
-//Some Optional search parameters
-WHERE field1 = value
-OR field2 = value
-OR field3 = value
-ORDER BY fieldName DESC | ASC 
-LIMIT 10
-GROUP BY fieldName
+List<sObjectName> variableName = [SELECT field1, 
+                                 field2,
+                                 field3 etc
+                  FROM Account
+                  //Some Optional search parameters
+                  WHERE field1 = value
+                  OR field2 = value
+                  OR field3 = value
+                  ORDER BY fieldName DESC | ASC 
+                  LIMIT 10
+                  GROUP BY fieldName];
 ```
 
 ## SOSL Query
